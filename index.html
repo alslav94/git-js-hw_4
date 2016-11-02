@@ -4,23 +4,49 @@
     <meta charset="UTF-8">
     <title>ДЗ4</title>
     <script>
-        function min() {
+        function minimum() { /*Сравнивает числа на минимальное значение*/
             var number_1 = prompt("Введите первое число");
             var number_2 = prompt("Введите второе число");
 
             var result = (number_1 < number_2);
             if (result == true) {
-                return "Наименьшее число: " + number_1;
+                alert("Наименьшее число: " + number_1);
             }
             else {
-                return "Наименьшее число: " + number_2;
+                alert("Наименьшее число: " + number_2);
+            }
+        }
+
+        function countBs() { /*Возвращает длину строки*/
+            var str = prompt("Введите строку");
+            alert("Длина строки равна: " + str.length);
+        }
+
+        function countChar() { /*Возвращает символ по индексу*/
+            var str = prompt("Введите строку");
+            var numberOfChar = prompt("Ввелите номер символа");
+            var test = str.charAt(numberOfChar);
+            alert("Искомый символ: " + test);
+        }
+
+        function isEven() { /*Проверяет четность числа*/
+            var num = prompt("Введите число");
+            var result = (Number.isInteger(num / 2));
+            if (result == true) {
+                alert("Число четное");
+            }
+            else {
+                alert("Число нечетное");
             }
         }
     </script>
 </head>
 <body>
 <form>
-<input type="button" value="Сравнить числа на минимальное значение" onclick="min()">
+    <input type="button" value="Сравнить числа на минимальное значение" onclick="minimum()">
+    <input type="button" value="Узнать длину строки" onclick="countBs()">
+    <input type="button" value="Получить букву по индексу" onclick="countChar()">
+    <input type="button" value="Узнать четное ли число" onclick="isEven()">
 </form>
 </body>
 </html>
