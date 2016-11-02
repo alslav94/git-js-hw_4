@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ4</title>
+    <script>
+        function min() {
+            var number_1 = prompt("Введите первое число");
+            var number_2 = prompt("Введите второе число");
+
+            var result = (number_1 < number_2);
+            if (result == true) {
+                return "Наименьшее число: " + number_1;
+            }
+            else {
+                return "Наименьшее число: " + number_2;
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+<input type="button" value="Сравнить числа на минимальное значение" onclick="min()">
+</form>
+</body>
+</html>
